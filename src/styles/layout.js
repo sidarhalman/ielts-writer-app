@@ -2,24 +2,17 @@ export const page = {
   minHeight: "100vh",
   background: "#e5e7eb",
   padding: 24,
-  width: "540px"
+  display: "flex",
+  justifyContent: "center"
 };
 
 export const card = {
+  width: 540,
   background: "#ffffff",
-  borderRadius: 12,
+  borderRadius: 16,
   boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
   display: "flex",
   flexDirection: "column",
-  height: "90vh"
-};
-
-export const header = {
-  padding: "12px 20px",
-  borderBottom: "1px solid #e5e7eb",
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  fontFamily: "system-ui",
-  fontSize: 14
+  height: "90vh",
+  overflow: "hidden"
 };
