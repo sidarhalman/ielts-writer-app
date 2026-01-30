@@ -26,6 +26,7 @@ export default function App() {
   );
 
   return (
+    <>
     <div style={layout.page}>
       <div style={layout.card}>
         <Header
@@ -55,5 +56,6 @@ export default function App() {
         />
       </div>
     </div>
+    </>
   );
 }
