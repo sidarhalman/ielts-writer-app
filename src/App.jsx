@@ -58,6 +58,14 @@ export default function App() {
           value={text}
           onChange={setText}
           placeholder={`Write your IELTS ${MODES[mode].label} answer...`}
+          onSave={() => {
+            console.log("SAVE clicked");
+          }}
+          onCheck={() => {
+            console.log("CHECK clicked");
+          }}
+          saveDisabled={!text.trim()}
+          checkDisabled={!text.trim()}
         />
       </div>
 
