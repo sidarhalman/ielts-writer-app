@@ -6,6 +6,8 @@ import ModeSwitch from "./components/ModeSwitch";
 import ProgressBar from "./components/ProgressBar";
 import TextArea from "./components/TextArea";
 import * as layout from "./styles/layout";
+import Sidebar from "./components/Sidebar";
+import RightPanel from "./components/RightPanel";
 
 const MODES = {
   task1: { words: 150, time: 20 * 60 },
@@ -26,8 +28,11 @@ export default function App() {
   );
 
   return (
-    <>
     <div style={layout.page}>
+      <div style={layout.sidebar}>
+        <Sidebar />
+      </div>
+
       <div style={layout.card}>
         <Header
           wordCount={wordCount}
@@ -52,10 +57,13 @@ export default function App() {
         <TextArea
           value={text}
           onChange={setText}
-          placeholder={`Write your IELTS ${mode} answer...`}
+          placeholder={`Write your IELTS ${MODES[mode].label} answer...`}
         />
       </div>
+
+      <div style={layout.rightPanel}>
+        <RightPanel />
+      </div>
     </div>
-    </>
   );
 }
